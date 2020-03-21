@@ -13,7 +13,10 @@ const SquareScreen = () => {
    return (
       <View>
          <ColorCounter
-            onIncrease={() => setRed(red + COLOR_INCREMENT)}
+            onIncrease={() => {
+               if (red + COLOR_INCREMENT > 255) { return; }
+               setRed(red + COLOR_INCREMENT)
+            }}
             onDecrease={() => setRed(red - COLOR_INCREMENT)}
             color="Red" />
          <ColorCounter
