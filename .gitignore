@@ -100,3 +100,7 @@ RNTester/Pods/*
 # Visual studio
 .vscode
 .vs
+
+# Expo
+.expo
+__generated__
